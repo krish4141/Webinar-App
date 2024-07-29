@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react'
 
-function App() {
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import WebinarList from './components/WebinarList';
+import { WebinarProvider } from './components/WebinarContext';
+
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <WebinarProvider>
+    <div className='App'>
+      <div className="container mt-5">
+      <WebinarList />
+     
+        
+      </div>
     </div>
-  );
+    </WebinarProvider>
+  )
 }
 
-export default App;
+export default App
